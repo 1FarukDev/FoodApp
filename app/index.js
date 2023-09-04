@@ -15,7 +15,6 @@ const Index = () => {
   const router = useRouter();
   const navigation = useNavigation();
   const handleImagePress = () => {
-    // navigation.navigate("home");
     router.replace("home");
   };
   return (
