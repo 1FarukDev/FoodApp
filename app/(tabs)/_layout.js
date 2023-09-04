@@ -1,43 +1,59 @@
 import { Tabs } from "expo-router";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
+import React from "react"; // Don't forget to import React
+
 export default () => {
   return (
-    <Tabs>
+    <Tabs
+    // tabBarOptions={{
+    //   activeTintColor: "#FA4A0C", // Set the active tab icon color here
+    //   tabBarLabel: "",
+    //   headerTitle: "Home Screen",
+    // }}
+    >
       <Tabs.Screen
         name="home"
         options={{
-          tabBarLabel: "List",
-          headerTitle: "Home Screen",
+          tabBarLabel: "",
+          headerShown: false,
+          headerTitle: "Home Sreen",
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="list" size={size} color={color} />
-          ),
-          // tabBarIcon: ({ color, size }) => (
-          //   // <FontAwesome name="check-circle" size={size} color={color} />
-          //   <AntDesign name="stepforward" size={24} color="black" />
-          // ),
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          tabBarLabel: "Account",
-          headerTitle: "My Account",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="user" size={size} color={color} />
-            // <AntDesign name="stepbackward" size={24} color="black" />
+            <FontAwesome5 name="home" size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="favorite"
         options={{
-          tabBarLabel: "News",
+          tabBarLabel: "",
           headerShown: false,
           headerTitle: "My Account",
           tabBarIcon: ({ color, size }) => (
-            //<FontAwesome name="font-awesome" size={24} color="black" />r={color} />
-            <FontAwesome5 name="newspaper" size={size} color={color} />
+            <FontAwesome name="heart-o" size={24} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          tabBarLabel: "",
+          headerShown: false,
+          headerTitle: "My Account",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name="user" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="order"
+        options={{
+          tabBarLabel: "",
+          headerShown: false,
+          headerTitle: "My Account",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="ios-timer-outline" size={24} color={color} />
           ),
         }}
       />
