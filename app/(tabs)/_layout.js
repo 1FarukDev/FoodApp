@@ -2,11 +2,13 @@ import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import React from "react"; // Don't forget to import React
+
 export default () => {
   return (
     <Tabs
       tabBarOptions={{
-        tabBarActiveTintColor: "#FA4A0C",
+        activeTintColor: "#FA4A0C", // Set the active tab icon color here
         tabBarLabel: "",
         headerTitle: "Home Screen",
       }}
@@ -28,7 +30,6 @@ export default () => {
           headerShown: false,
           headerTitle: "My Account",
           tabBarIcon: ({ color, size }) => (
-            //<FontAwesome name="font-awesome" size={24} color="black" />r={color} />
             <FontAwesome name="heart-o" size={24} color={color} />
           ),
         }}
@@ -40,7 +41,6 @@ export default () => {
           headerTitle: "My Account",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome5 name="user" size={size} color={color} />
-            // <AntDesign name="stepbackward" size={24} color="black" />
           ),
         }}
       />
@@ -51,7 +51,6 @@ export default () => {
           headerTitle: "My Account",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="ios-timer-outline" size={24} color={color} />
-            // <AntDesign name="stepbackward" size={24} color="black" />
           ),
         }}
       />
