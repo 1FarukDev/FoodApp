@@ -7,16 +7,17 @@ import React from "react"; // Don't forget to import React
 export default () => {
   return (
     <Tabs
-      tabBarOptions={{
-        activeTintColor: "#FA4A0C", // Set the active tab icon color here
-        tabBarLabel: "",
-        headerTitle: "Home Screen",
-      }}
+    // tabBarOptions={{
+    //   activeTintColor: "#FA4A0C", // Set the active tab icon color here
+    //   tabBarLabel: "",
+    //   headerTitle: "Home Screen",
+    // }}
     >
       <Tabs.Screen
         name="home"
         options={{
           tabBarLabel: "",
+          headerShown: false,
           headerTitle: "Home Sreen",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome5 name="home" size={size} color={color} />
@@ -38,6 +39,7 @@ export default () => {
         name="profile"
         options={{
           tabBarLabel: "",
+          headerShown: false,
           headerTitle: "My Account",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome5 name="user" size={size} color={color} />
@@ -48,6 +50,7 @@ export default () => {
         name="order"
         options={{
           tabBarLabel: "",
+          headerShown: false,
           headerTitle: "My Account",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="ios-timer-outline" size={24} color={color} />
