@@ -7,11 +7,11 @@ import React from "react"; // Don't forget to import React
 export default () => {
   return (
     <Tabs
-    // tabBarOptions={{
-    //   activeTintColor: "#FA4A0C", // Set the active tab icon color here
-    //   tabBarLabel: "",
-    //   headerTitle: "Home Screen",
-    // }}
+      tabBarOptions={{
+        activeTintColor: "#FA4A0C", // Set the active tab icon color here
+        tabBarLabel: "",
+        headerTitle: "Home Screen",
+      }}
     >
       <Tabs.Screen
         name="home"
