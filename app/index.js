@@ -7,16 +7,36 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
-import React from "react";
+import { supabase } from "../lib/supabase";
+import React, { useState, useEffect } from "react";
 import { Link, useRouter } from "expo-router";
 
 const Index = () => {
+  // const [products, setProducts] = useState([]);
+  // const [error, setError] = useState(null); // Add an error state
+
+  // useEffect(() => {
+  //   async function fetchProducts() {
+  //     try {
+  //       let { data: items, error } = await supabase.from("items").select("*");
+  //       if (error) {
+  //         throw error;
+  //       }
+  //       setProducts(data);
+  //       setError(null); // Clear any previous errors if successful
+  //     } catch (error) {
+  //       setError("An error occurred while fetching data."); // Handle the error
+  //     }
+  //   }
+
+  //   fetchProducts();
+  // }, []);
+  // console.log(products);
   const router = useRouter();
   const navigation = useNavigation();
   const handleImagePress = () => {
     // navigation.navigate("home");
-    router.replace("register");
+    router.replace("home");
   };
   return (
     // <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
