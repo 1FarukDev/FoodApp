@@ -1,12 +1,18 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
-
+import { LinearGradient } from "expo-linear-gradient";
 const foodItem = ({ item }) => {
   return (
     <View style={styles.foodList}>
-      <Image source={item.image} style={styles.foodImage} />
-      <Text style={styles.foodName}>{item.name}</Text>
-      <Text style={styles.foodPrice}>{item.price}</Text>
+      <LinearGradient
+        colors={["red", "yellow", "green"]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+      >
+        <Image source={item.image} style={styles.foodImage} />
+        <Text style={styles.foodName}>{item.name}</Text>
+        <Text style={styles.foodPrice}>{item.price}</Text>
+      </LinearGradient>
     </View>
   );
 };
@@ -22,6 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     height: 300,
+    // backgroundColor: "black",
   },
   foodImage: {
     borderWidth: 2,
