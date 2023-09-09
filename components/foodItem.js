@@ -4,15 +4,9 @@ import { LinearGradient } from "expo-linear-gradient";
 const foodItem = ({ item }) => {
   return (
     <View style={styles.foodList}>
-      <LinearGradient
-        colors={["red", "yellow", "green"]}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-      >
-        <Image source={item.image} style={styles.foodImage} />
-        <Text style={styles.foodName}>{item.name}</Text>
-        <Text style={styles.foodPrice}>{item.price}</Text>
-      </LinearGradient>
+      <Image source={item.image} style={styles.foodImage} />
+      <Text style={styles.foodName}>{item.name}</Text>
+      <Text style={styles.foodPrice}>{item.price}</Text>
     </View>
   );
 };
@@ -22,18 +16,21 @@ export default foodItem;
 const styles = StyleSheet.create({
   foodList: {
     marginRight: 20,
-    padding: 5,
+    paddingHorizontal: 5,
+    borderRadius: 30,
     alignItems: "center",
     alignContent: "center",
     justifyContent: "center",
     textAlign: "center",
     height: 300,
-    // backgroundColor: "black",
+    backgroundColor: "#ffff",
   },
   foodImage: {
     borderWidth: 2,
     borderColor: "red",
     borderRadius: 100,
+    width: 150,
+    height: 150,
   },
   foodName: {
     fontSize: 20,
