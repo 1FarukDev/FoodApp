@@ -101,10 +101,12 @@ const Home = () => {
       </View>
 
       {/* Wants to render the category components */}
-      {activeComponent === 1 && <Foods />}
-      {activeComponent === 2 && <Drinks />}
-      {activeComponent === 3 && <Snacks />}
-      {activeComponent === 4 && <Sauce />}
+      <View style={styles.activeComponent}>
+        {activeComponent === 1 && <Foods />}
+        {activeComponent === 2 && <Drinks />}
+        {activeComponent === 3 && <Snacks />}
+        {activeComponent === 4 && <Sauce />}
+      </View>
     </SafeAreaView>
   );
 };
@@ -159,5 +161,8 @@ const styles = StyleSheet.create({
     borderColor: "#FA4A0C",
     // width: 50,
     paddingBottom: 5,
+  },
+  activeComponent: {
+    marginTop: 40,
   },
 });
